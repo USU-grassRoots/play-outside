@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutsideSimulator_Test", "Ou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutsideEngine", "OutsideEngine\OutsideEngine.csproj", "{9EEBF904-46F9-4AA4-B4A4-970225DC8021}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutsideEngine_Test", "OutsideEngineTest\OutsideEngine_Test.csproj", "{4923FC56-8BC4-4F5B-B984-C010AC32ED56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9EEBF904-46F9-4AA4-B4A4-970225DC8021}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EEBF904-46F9-4AA4-B4A4-970225DC8021}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EEBF904-46F9-4AA4-B4A4-970225DC8021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4923FC56-8BC4-4F5B-B984-C010AC32ED56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4923FC56-8BC4-4F5B-B984-C010AC32ED56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4923FC56-8BC4-4F5B-B984-C010AC32ED56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4923FC56-8BC4-4F5B-B984-C010AC32ED56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

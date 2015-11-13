@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{358A86A3-F89D-4334-B6AA-5427F7CD9F8B}</ProjectGuid>
+    <ProjectGuid>{4923FC56-8BC4-4F5B-B984-C010AC32ED56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OutsideSimulator_Test</RootNamespace>
-    <AssemblyName>OutsideSimulator_Test</AssemblyName>
+    <RootNamespace>OutsideEngineTest</RootNamespace>
+    <AssemblyName>OutsideEngineTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,10 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
-      <HintPath>..\packages\SlimDX.4.0.13.44\lib\NET40\SlimDX.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -58,14 +54,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\DirtyableTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OutsideSimulator\OutsideSimulator.csproj">
-      <Project>{51ffff11-3430-4d49-adac-25b23cce215f}</Project>
-      <Name>OutsideSimulator</Name>
+    <ProjectReference Include="..\OutsideEngine\OutsideEngine.csproj">
+      <Project>{9eebf904-46f9-4aa4-b4a4-970225dc8021}</Project>
+      <Name>OutsideEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
