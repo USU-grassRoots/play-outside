@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Dirtyable.cs" />
+    <Compile Include="Util\MathF.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
