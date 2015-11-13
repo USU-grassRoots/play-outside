@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NULLCHECKS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -43,8 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildFlags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Dirtyable.cs" />
+    <Compile Include="Util\Geometry\DetailedIntersectionGeometry.cs" />
+    <Compile Include="Util\Geometry\IntersectionGeometry.cs" />
+    <Compile Include="Util\Geometry\Line.cs" />
+    <Compile Include="Util\Geometry\Ray.cs" />
+    <Compile Include="Util\Geometry\Shape.cs" />
     <Compile Include="Util\MathF.cs" />
   </ItemGroup>
   <ItemGroup>

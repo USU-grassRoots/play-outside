@@ -79,10 +79,12 @@ namespace OutsideEngine.Util
         /// <param name="ComputationMethod">Method used to compute encapsulated value</param>
         public Dirtyable(Func<T> ComputationMethod)
         {
+#if (NULLCHECKS)
             if (ComputationMethod == null)
             {
                 throw new ArgumentNullException("ComputationMethod");
             }
+#endif
 
             ComputeValue = ComputationMethod;
             Dirty = true;
