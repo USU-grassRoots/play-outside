@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutsideSimulator", "OutsideSimulator\OutsideSimulator.csproj", "{51FFFF11-3430-4D49-ADAC-25B23CCE215F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutsideSimulator_Test", "OutsideSimulator_Test\OutsideSimulator_Test.csproj", "{358A86A3-F89D-4334-B6AA-5427F7CD9F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutsideEngine", "OutsideEngine\OutsideEngine.csproj", "{9EEBF904-46F9-4AA4-B4A4-970225DC8021}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51FFFF11-3430-4D49-ADAC-25B23CCE215F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FFFF11-3430-4D49-ADAC-25B23CCE215F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FFFF11-3430-4D49-ADAC-25B23CCE215F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FFFF11-3430-4D49-ADAC-25B23CCE215F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358A86A3-F89D-4334-B6AA-5427F7CD9F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358A86A3-F89D-4334-B6AA-5427F7CD9F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358A86A3-F89D-4334-B6AA-5427F7CD9F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358A86A3-F89D-4334-B6AA-5427F7CD9F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EEBF904-46F9-4AA4-B4A4-970225DC8021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EEBF904-46F9-4AA4-B4A4-970225DC8021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EEBF904-46F9-4AA4-B4A4-970225DC8021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EEBF904-46F9-4AA4-B4A4-970225DC8021}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
