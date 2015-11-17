@@ -53,5 +53,16 @@ namespace OutsideEngine.Util.Geometry
             Point1 = Point2;
             Point1 = tmp;
         }
+
+        /// <summary>
+        /// Creates a line between the two points specified.
+        /// </summary>
+        /// <param name="anchorPoint">Primary point on the line (in computing rays, this is the anchor)</param>
+        /// <param name="otherPoint">Secondary point on the line</param>
+        public Line(Vector3 anchorPoint, Vector3 otherPoint)
+        {
+            Point1 = anchorPoint;
+            Point2 = otherPoint;
+        }
     }
 }

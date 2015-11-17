@@ -28,6 +28,10 @@ namespace OutsideEngine.Util.Geometry
         /// The cached value for a vector
         /// </summary>
         private Vector3 _direction;
+
+        /// <summary>
+        /// The normalized direction in which the ray points. Automatically normalizes on setting
+        /// </summary>
         public Vector3 Direction
         {
             get

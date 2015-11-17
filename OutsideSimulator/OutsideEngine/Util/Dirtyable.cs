@@ -82,7 +82,7 @@ namespace OutsideEngine.Util
 #if (NULLCHECKS)
             if (ComputationMethod == null)
             {
-                throw new ArgumentNullException("ComputationMethod");
+                throw new ArgumentNullException(nameof(ComputationMethod));
             }
 #endif
 
@@ -104,10 +104,7 @@ namespace OutsideEngine.Util
                 Dirty = true;
             }
 
-            if (OnDirtied != null)
-            {
-                OnDirtied(this, EventArgs.Empty);
-            }
+            OnDirtied?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>

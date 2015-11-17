@@ -11,18 +11,22 @@ namespace OutsideEngine.Util
     /// </summary>
     public static partial class MathF
     {
+        /// <summary>
+        /// Constant square root of 2 (used in many calculations)
+        /// </summary>
         public static readonly float Sqrt2 = (float)Math.Sqrt(2);
+
+        /// <summary>
+        /// Floating point value for PI
+        /// </summary>
         public static readonly float PI = (float)Math.PI;
 
         /// <summary>
         /// Convert degrees to radians
         /// </summary>
         /// <param name="degrees"></param>
-        /// <returns></returns>
-        public static float ToRadians(float degrees)
-        {
-            return PI * degrees / 180.0f;
-        }
+        /// <returns></returns> 
+        public static float ToRadians(float degrees) => PI * degrees / 180.0f;
 
         /// <summary>
         /// Clamp a value to within a certain range - if provided something below said range,
@@ -32,10 +36,7 @@ namespace OutsideEngine.Util
         /// <param name="min"></param>
         /// <param name="max"></param>
         /// <returns></returns>
-        public static float Clamp(float value, float min, float max)
-        {
-            return Math.Max(min, Math.Min(value, max));
-        }
+        public static float Clamp(float value, float min, float max) => Math.Max(min, Math.Min(value, max)); 
 
         /// <summary>
         /// Normalize an angle in radians to the range 0, 2*PI
@@ -48,5 +49,12 @@ namespace OutsideEngine.Util
             while (angle >= 2 * PI) angle -= 2 * PI;
             return angle;
         }
+
+        /// <summary>
+        /// Compute floating point square root of X
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
+        public static float Sqrt(float x) => (float)Math.Sqrt(x);
     }
 }
