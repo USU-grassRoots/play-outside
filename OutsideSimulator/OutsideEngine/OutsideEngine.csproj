@@ -52,6 +52,7 @@
     <Compile Include="Util\Geometry\Line.cs" />
     <Compile Include="Util\Geometry\Ray.cs" />
     <Compile Include="Util\Geometry\Shape.cs" />
+    <Compile Include="Util\Geometry\Sphere.cs" />
     <Compile Include="Util\MathF.cs" />
   </ItemGroup>
   <ItemGroup>
