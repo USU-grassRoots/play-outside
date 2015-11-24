@@ -63,7 +63,6 @@
     <Compile Include="Util\DirtyableTest.cs" />
     <Compile Include="Util\Geometry\LineTest.cs" />
     <Compile Include="Util\Geometry\RayTest.cs" />
-    <Compile Include="Util\Geometry\SphereTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OutsideEngine\OutsideEngine.csproj">
