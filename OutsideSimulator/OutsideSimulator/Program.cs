@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+using SlimDX;
+using OutsideEngine;
+using System.Diagnostics;
+using System.Drawing;
+
 namespace OutsideSimulator
 {
     static class Program
@@ -13,9 +18,13 @@ namespace OutsideSimulator
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Configuration.EnableObjectTracking = true;
+            var ti = new MainRenderWindow(Process.GetCurrentProcess().Handle);
+            if(!ti.Init())
+            {
+                return;
+            }
+            ti.Run();
         }
     }
 }

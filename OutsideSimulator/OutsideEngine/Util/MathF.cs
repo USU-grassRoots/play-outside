@@ -56,5 +56,45 @@ namespace OutsideEngine.Util
         /// <param name="x"></param>
         /// <returns></returns>
         public static float Sqrt(float x) => (float)Math.Sqrt(x);
+
+        /// <summary>
+        /// From an Int32, return the low word (the bottom 16 bits) value
+        /// </summary>
+        /// <param name="i">Input 32 bit integer</param>
+        /// <returns>Bottom 16 bits (2 bytes)</returns>
+        public static int LowWord(this int i)
+        {
+            return i & 0xFFFF;
+        }
+
+        /// <summary>
+        /// From an Int32, return the high word (top 16 bits) value
+        /// </summary>
+        /// <param name="i">Input 32 bit integer</param>
+        /// <returns>Top 16 bits (2 bytes)</returns>
+        public static int HighWord(this int i)
+        {
+            return (i >> 16) & 0xFFFF;
+        }
+
+        /// <summary>
+        /// 32-bit floating point version of Sin (all it does is cast the double precision version)
+        /// </summary>
+        /// <param name="x">Input to the sin function</param>
+        /// <returns>Output of the sin function</returns>
+        public static float Sin(float x)
+        {
+            return (float)Math.Sin(x);
+        }
+
+        /// <summary>
+        /// 32-bit floating point version of Cos (all it does is cast the double precision version)
+        /// </summary>
+        /// <param name="x">Input to the cos function</param>
+        /// <returns>Output of the cos function</returns>
+        public static float Cos(float x)
+        {
+            return (float)Math.Cos(x);
+        }
     }
 }
