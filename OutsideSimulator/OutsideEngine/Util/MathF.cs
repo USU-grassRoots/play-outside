@@ -96,5 +96,19 @@ namespace OutsideEngine.Util
         {
             return (float)Math.Cos(x);
         }
+
+        /// <summary>
+        /// Invert and transpose a matrix
+        /// </summary>
+        /// <param name="m">SlimDX matrix of which to invert and take transpose</param>
+        /// <returns>The inverted and transposed matrix</returns>
+        public static SlimDX.Matrix InverseTranspose(SlimDX.Matrix m)
+        {
+            var a = m;
+            a.M41 = a.M42 = a.M43 = 0;
+            a.M44 = 1;
+
+            return SlimDX.Matrix.Transpose(SlimDX.Matrix.Invert(a));
+        }
     }
 }

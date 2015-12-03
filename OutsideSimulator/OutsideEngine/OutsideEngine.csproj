@@ -11,6 +11,8 @@
     <AssemblyName>OutsideEngine</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,12 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
-      <HintPath>..\packages\SlimDX.4.0.13.44\lib\NET40\SlimDX.dll</HintPath>
+    <Reference Include="AssimpNet, Version=3.3.1.0, Culture=neutral, PublicKeyToken=0d51b391f59f42a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\AssimpNet.3.3.1\lib\net20\AssimpNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,8 +50,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildFlags.cs" />
+    <Compile Include="Forms\OutsideWindowBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rendering\Lighting\Lights.cs" />
+    <Compile Include="Rendering\Mesh\BasicModel.cs" />
+    <Compile Include="Rendering\Mesh\MeshGeometry.cs" />
+    <Compile Include="Rendering\Mesh\MeshModel.cs" />
+    <Compile Include="Rendering\Shaders\BasicEffect.cs" />
+    <Compile Include="Rendering\Shaders\ShaderBase.cs" />
+    <Compile Include="Resource\TextureManager.cs" />
+    <Compile Include="Timer\GameTimer.cs" />
     <Compile Include="Util\Dirtyable.cs" />
+    <Compile Include="Util\DisposableClass.cs" />
     <Compile Include="Util\Geometry\DetailedIntersectionGeometry.cs" />
     <Compile Include="Util\Geometry\IntersectionGeometry.cs" />
     <Compile Include="Util\Geometry\Line.cs" />
@@ -54,11 +71,27 @@
     <Compile Include="Util\Geometry\Shape.cs" />
     <Compile Include="Util\Geometry\Sphere.cs" />
     <Compile Include="Util\MathF.cs" />
+    <Compile Include="Util\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rendering\Shaders\FX\BasicEffect.fx" />
+    <Content Include="Rendering\Shaders\FX\LightingMethods.fx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>cd ..\..\Rendering\Shaders\FX
+fxc /Od /Fc /Zi /T  fx_5_0 /Fo BasicEffect.fxo BasicEffect.fx</PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\AssimpNet.3.3.1\build\AssimpNet.targets" Condition="Exists('..\packages\AssimpNet.3.3.1\build\AssimpNet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\AssimpNet.3.3.1\build\AssimpNet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AssimpNet.3.3.1\build\AssimpNet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
